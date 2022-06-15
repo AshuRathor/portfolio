@@ -6,7 +6,7 @@ var mongooose = require("mongoose")
 const bodyparser = require("body-parser")
 const { default: mongoose } = require("mongoose")
 mongoose.connect('mongodb://localhost/contact_explore', {useNewUrlParser: true})
-const port= 80
+const port= process.env.PORT || 80
 
 const ContactSchema = new mongoose.Schema({
     Name: String,
